@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Khan Electronic</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="script/jquery.js"></script>
+	<link rel="stylesheet" href="font/quicksand/fonts-quicksand.css">
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/content.css">
+	<link rel="stylesheet" href="style/form.css">
+	<link rel="stylesheet" href="style/back-Top.css">
+	<link rel="stylesheet" href="style/mini-header-footer.css">
+</head>
+<body>
+
+	<header>
+		<img src="img/Logo/NanoLogo.png" alt="">
+		<nav>	
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li>
+					<a href="">Product</a>
+					<div class="dropdown-content">
+						<a href="product_tablet.html">Computer</a>
+						<a href="product_laptop">Laptop</a>
+						<a href="product_handphone">Smartphone</a>
+					</div>
+				</li>
+				<li><a href="about_company.html">About Company</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="register.html"><span>Register</span></a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="container">
+		<h1>REGISTER</h1>
+		<form name ="input-form" onsubmit ="return formValidation()" method= "POST">
+			<div class = "input-row">
+				<div class= "label">Username</div>
+				<div class = "field">
+					<input type = "text" name="txtusername" id="txtusername">
+				</div>
+			</div>
+			<div class = "input-row"> 
+				<div class= 'label'>Full Name</div>
+				<div class= 'field'>
+					<input type="text" name = "txtnama" id ="txtnama">
+				</div>
+			</div>
+			<div class ="input-row">
+				<div class= "label">Gender</div>
+				<div class = "input">
+					<input type="radio" name="gender" value="Male">Male
+					<input type="radio" name="gender" value="Female">Female
+				</div>
+			</div>
+			<div class ="input-row">
+				<div class = "label">Birthday
+					<div class="field bday">
+						<input style="width: 170px;" value="" type="date" name="bday" min="1979-12-31">
+					</div>
+				</div>
+			</div>
+			<div class ="input-row">
+				<div class ="label">Address</div>
+				<div class ="field">
+					<input type ="textarea" name ="txtalamat" id ="txtalamat">
+				</div>
+			</div>
+
+
+			<div class = "input-row"> 
+				<div class= 'label'>Email</div>
+				<div class= 'field'>
+					<input type="text" name ="txtemail" id = "txtemail" >
+				</div>
+			</div>
+			<div class = "input-row"> 
+				<div class= 'label'>Password</div>
+				<div class= 'field'>
+					<input type="password" name ="txtpassword" id ="txtpassword">
+				</div>
+			</div>
+			<div class="input-row">
+				<div class = "input">
+					<input type ="submit" value="submit">
+				</div>
+			</div>
+			<div id="message"></div>
+
+		</form>
+	</div>
+	<footer>
+		<div class="social-media-container">
+				<img src="img/social media/facebook.png" alt="">
+				<a href="https://www.facebook.com/muk1993">Facebook</a>
+				<img src="img/social media/twitter.png" alt="">
+				<a href="https://twitter.com/muk1993">Twitter</a>
+				<img src="img/social media/instagram.png" alt="">
+				<a href="https://www.instagram.com/usman.villa/">Instagram</a>
+		</div>
+
+		<div id="footer-copyright">
+			© 2016 Copyright
+		</div>
+	</footer>
+
+
+	<script type="text/javascript">
+
+		function formValidation(){
+			/*var ... = document.forms["name di tag form"]["name di tag input text"].value*/
+			
+			var username = document.forms["input-form"]["txtusername"].value;
+
+			var nama = document.forms["input-form"]["txtnama"].value;	
+
+			var gender = document.forms["input-form"]["gender"].value;
+			var birthday = document.forms["input-form"]["bday"].value;
+			var address = document.forms["input-form"]["txtalamat"].value;
+			var email = document.forms["input-form"]["txtemail"].value;
+			var password = document.forms["input-form"]["txtpassword"].value;
+			var msg = document.getElementById("message");
+			
+
+			if(username == ""){
+				msg.innerHTML ="username must be filled !";
+				return false;
+			}
+			else if (nama == ""){
+				msg.innerHTML="name must be filled !";
+				return false;
+			}
+			else if(gender == ""){
+				msg.innerHTML="gender must be filled";
+				return false;
+			}
+			else if(birthday == ""){
+				msg.innerHTML="birthday must be filled";
+				return false;
+			}
+			else if(address == ""){
+				msg.innerHTML="address must be filled !";
+				return false;
+			}
+			else if (email == ""){
+				msg.innerHTML="email must be filled !";
+				return false;
+			}
+			else if(email.indexOf("@") ==-1 || email.indexOf(".") ==-1){
+				msg.innerHTML="email hrs mengandung @ dan .";
+				return false;
+			}
+			else if(email.indexOf("@.")==-1 || email.indexOf(".@")==-1){
+				msg.innerHTML="@ dan . atau . dan @ tidak boleh bersebalahan";
+				return false;
+			}
+				// else if (email.indexOf("@.") > -1 || email.indexOf(".@") > -1){
+				// 	alert("@ dan . gk bole sebelahan");
+				// 	return false;
+
+				// }
+				// else if (email.indexOf("@") < 0 || email.indexOf(".")< 0){
+				// 	return false;
+				// }
+				else if(password == ""){
+					alert("password must be filled !");
+					return false;
+				}
+			}
+			function cekEmail(email){
+				alert("asd");
+				//if(email.startsWith("@") || email.startsWith(".")){
+				//	alert("email gk bisa diawali @ & .");
+				//	return false;
+				//}
+				
+				//else if (email.endsWith("@")||email.endsWith(".")){
+				//	alert("email gk bole diakhiri @ & .");
+				//	return false;
+				//}
+				
+			//	if (email.indexOf("@.") > -1 || email.indexOf(".@") > -1){
+			//		alert("@ dan . gk bole sebelahan");
+			//		return false;
+			//
+			//	}
+			//	else if (email.indexOf("@") < 0 || email.indexOf(".")< 0){
+			//		return false;
+			//	}
+			//	else {
+
+			//		return true;
+			//	}
+		}
+
+		
+
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+form {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 0%;
+	padding-bottom: 0;
+}
+
+h1 {
+	padding-top: 5%;
+	text-align: center;
+	font-weight: 600;
+}
+
+.input-row {
+	padding: 1% 0;
+	display: block;
+}
+
+.label {
+	padding: 1% 0;
+}
+
+.label div {
+	padding: 1% 0;
+}
+
+.field {
+	padding: 1% 0;
+}
+
+.bday {
+	width: 
+}
+
+input {
+	text-align: center;
+}
+
+.input {
+	height: 10;
+}
+
+
+input[type=text], input[type=date], 
+input[type=textarea], input[type=password] { 
+	width: 278px; 
+	height: 30px;
+	text-align: center;
+	background-color: rgba(0,0,0,.1);
+	color: black;
+	font-weight: 600;
+	border: 0;
+	box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+	margin-bottom: 3%;
+	margin-top: 0; 
+}
+
+ input[type=submit] {
+ 	width: 200px; 
+	height: 30px;
+	text-align: center;
+	background-color: rgba(0,0,0,.1);
+	color: black;
+	font-weight: 600;
+	border: 0;
+	margin-bottom: 3%;
+	margin-top: 0; 
+ }
+
+ input[type="submit"]:hover {
+    background-color: rgba(100,100,100,.4);
+    transition-duration: 0.4s;
+}

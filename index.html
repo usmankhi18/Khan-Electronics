@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Khan Electronic</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="script/jquery.js"></script>
+	<link rel="stylesheet" href="font/quicksand/fonts-quicksand.css">
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/header-footer.css">
+	<link rel="stylesheet" href="style/content.css">
+	<link rel="stylesheet" href="style/imgslider.css">
+	<link rel="stylesheet" href="style/back-Top.css">
+</head>
+<body>
+
+	
+	<header>
+		<nav>	
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li>
+					<span>Product</span>
+					<div class="dropdown-content">
+						<a href="product_tablet.html">Computer</a>
+						<a href="product_laptop.html">Laptop</a>
+						<a href="product_handphone.html">Smartphone</a>
+					</div>
+				</li>
+				<li><a href="about_company.html">About Company</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="register.html"><span>Register</span></a></li>
+			</ul>
+		</nav>
+		<div id="header-desc">
+			<a href="index.html"><div id="logo"></div></a>
+			<div id="title">Khan Electronic</div>
+			<div id="motto">brings you the best shopping experience</div>
+			<button id="catalog">CATALOG</button>
+		</div>
+	</header>
+
+	<div id="container">
+		<section>
+			<div class="img-slider">
+				<div class="items" style="background-image:url('img/hp.jpg')">
+				</div>
+				<div class="items" style="background-image:url('img/htc.jpg')">
+				</div>
+				<div class="items" style="background-image:url('img/surface.jpg')">
+				</div>
+				<div class="items" style="background-image:url('img/macbook.jpg'); background-position: center;">
+				</div>
+			</div>
+			
+			<div name="feature" id="feature">Featured</div>
+			
+			<div id="product-list">
+				<a href="product_handphone.html">
+					<div class="box-list">
+						<div class="title">Handphone</div>
+						<div class="image-holder">
+							<img src="img/htc-thumb.jpg">
+						</div>
+						<div class="description">
+							<a href="">Explore</a>
+						</div>
+					</div>
+				</a>
+				<a href="product_laptop.html">
+					<div class="box-list">
+						<div class="title">Laptop</div>
+						<div class="image-holder">
+							<img src="img/hp-icon.jpg" alt="">
+						</div>
+						<div class="description">
+							Explore
+						</div>
+					</div>
+				</a>
+				<a href="product_tablet.html">
+					<div class="box-list">
+						<div class="title">Computer</div>
+						<div class="image-holder">
+							<img src="img/surface-thumb.jpg" alt="">
+						</div>
+						<div class="description">
+							Explore
+						</div>
+					</div>
+				</a>
+			</div>
+
+		</section>
+		<footer>
+			<div class="social-media-container">
+				<img src="img/social media/facebook.png" alt="">
+				<a href="https://www.facebook.com/muk1993">Facebook</a>
+				<img src="img/social media/twitter.png" alt="">
+				<a href="https://twitter.com/muk1993">Twitter</a>
+				<img src="img/social media/instagram.png" alt="">
+				<a href="https://www.instagram.com/usman.villa/">Instagram</a>
+			</div>
+
+			<div id="footer-copyright">
+				© 2016 Copyright
+			</div>
+		</footer>
+	</div>
+	<a href="#" class="back-to-top">
+		back to top
+	</a>
+</div>
+<script src="script/imgslider.js"></script>
+<script src="script/back-Top.js"></script>
+<script>
+	$("#catalog").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#feature").offset().top
+		}, 1000);
+	});
+</script>
+</body>	
+</html>
